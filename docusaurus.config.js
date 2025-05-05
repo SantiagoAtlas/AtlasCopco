@@ -43,7 +43,7 @@ const config = {
             title: 'Atlas Copco Docs',
             logo: {
                 alt: 'Atlas Copco Logo',
-                src: 'img/atlas-logo.svg', // Asegúrate que el archivo existe en static/img/
+                src: 'img/logo.png', // Asegúrate que el archivo existe en static/img/
             },
             items: [
                 { to: 'docs/sys6000', label: 'SYS6000', position: 'left' },
