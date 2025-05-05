@@ -46,8 +46,8 @@ const config = {
                 src: 'img/logo.png', // Asegúrate que el archivo existe en static/img/
             },
             items: [
-                { to: 'docs/sys6000', label: 'SYS6000', position: 'left' },
-                { to: 'docs/asc5000', label: 'ASC5000', position: 'left' },
+                // { to: 'docs/sys6000', label: 'SYS6000', position: 'left' },
+                // { to: 'docs/asc5000', label: 'ASC5000', position: 'left' },
                 {
                     href: 'https://github.com/atlas-copco/docs',
                     label: 'GitHub',
