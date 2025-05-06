@@ -9,7 +9,8 @@
 5. [Simulation Module](#simulation-module)  
 6. [Validation with MQTT Explorer](#validation-with-mqtt-explorer)  
 7. [GitLab Repository](#gitlab-repository)  
-8. [Final Notes](#final-notes)
+8. [Final Notes](#final-notes)  
+9. [Detailed Documentation](#detailed-documentation)
 
 ---
 
@@ -27,7 +28,6 @@
 
 MQTT is a lightweight protocol ideal for low-power devices or limited network conditions.  
 Available at:
-
 
 - **Self-contained**: Use for Linux versions < 3.2.42 (includes .NET)  
 - **Framework**: Use for Linux versions ≥ 3.2.42 (requires preinstalled .NET)
@@ -115,3 +115,17 @@ Main repository:
 - **VisuXP** visualization software is available in the hardware folder  
 - Configuration should be performed through ETH3  
 - Linux version can be verified under the "Info" menu in the interface to choose the right binary
+
+---
+
+## Detailed Documentation
+
+You can download the complete PDF documentation here:  
+[Developer MQTT Documentation (PDF)](/DeveloperMQTTDocumentation.pdf)
+
+Alternatively, you can view the PDF directly here:
+
+<iframe src="/DeveloperMQTTDocumentation.pdf" width="100%" height="600px">
+  This browser does not support PDFs. Please download the PDF to view it:
+  <a href="/DeveloperMQTTDocumentation.pdf">Download PDF</a>.
+</iframe>

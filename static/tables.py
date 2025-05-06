@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import re
 
 # Path to your Excel file
 file_path = r'C:\Data\docusaurus\AtlasCopco\overview.xlsx'
@@ -21,11 +22,22 @@ df = df.fillna('')  # Replace NaN with empty strings
 # Replace problematic characters in cells
 def clean_cell(cell):
     if isinstance(cell, str):
-        # Escape curly braces
+        # Escapar llaves para evitar errores de MDX
         cell = cell.replace('{', '&#123;').replace('}', '&#125;')
-        # Optional: replace double quotes
-        # cell = cell.replace('"', "'")
+
+        # Reemplazar etiquetas <br>, <br >, </br> por <br />
+        cell = re.sub(r'</br\s*>', '', cell, flags=re.IGNORECASE)
+        cell = re.sub(r'<br\s*>', '<br />', cell, flags=re.IGNORECASE)
+
+        # Reemplazar saltos de línea por `<br />` para Markdown en tablas
+        cell = cell.replace('\n', '<br />')
+
+        # Opcional: envolver JSON o listas multilínea en bloques de código si detectamos que parece JSON
+        if ':' in cell and any(x in cell for x in ['"', '{', '}']):
+            cell = f"```json\n{cell}\n```"
+
     return cell
+
 
 # Apply cleaning to the entire DataFrame
 df = df.applymap(clean_cell)

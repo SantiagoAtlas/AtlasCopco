@@ -40,22 +40,22 @@ const config = {
     themeConfig: {
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
-            title: 'Atlas Copco Docs',
+            title: '', // Ocultamos el texto aquí
             logo: {
                 alt: 'Atlas Copco Logo',
-                src: 'img/logo.png', // Asegúrate que el archivo existe en static/img/
+                src: 'img/logo.svg',
+                href: 'https://www.atlascopco.com', // Este es el link que se activa al dar clic en el logo
             },
             items: [
-                // { to: 'docs/sys6000', label: 'SYS6000', position: 'left' },
-                // { to: 'docs/asc5000', label: 'ASC5000', position: 'left' },
                 {
-                    href: 'https://github.com/atlas-copco/docs',
-                    label: 'GitHub',
-                    position: 'right',
+                    to: 'https://www.atlascopco.com', // Este ítem será el "Atlas Copco" que quieres que aparezca
+                    label: 'Atlas Copco',
+                    position: 'left',
                 },
+                // otros ítems que ya tengas
             ],
         },
-        footer: {
+        footer: { // Coma agregada aquí
             style: 'dark',
             links: [
                 {
